@@ -47,7 +47,8 @@ brew install --cask font-meslo-lg-nerd-font
 
 ---
 # **oh-my-posh**
-## Install
+
+## Install [oh-my-posh](https://ohmyposh.dev/)
 ```
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
 ```
