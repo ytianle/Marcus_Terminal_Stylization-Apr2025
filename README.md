@@ -15,7 +15,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # 3. install homebrew
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-## homebrew ==> Next steps:
+## 3.1 homebrew ==> Next steps:
 - Run these commands in your terminal to add Homebrew to your PATH:
     `echo >> /Users/marcus/.zprofile`
     `echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/marcus/.zprofile`
@@ -38,7 +38,7 @@ brew install alfred
 brew install --cask font-meslo-lg-nerd-font
 ```
 
-## setting up terminal
+## 4.1 setting up terminal
 - open "Terminal → Preferences → Profiles → Text"
 - find "Font", click "Change" or "Edit"
 - set up font："MesloLGS NF"
@@ -46,7 +46,7 @@ brew install --cask font-meslo-lg-nerd-font
 <img width="835" alt="SCR-20250427-ozjn" src="https://github.com/user-attachments/assets/42c05bb2-e3ce-414f-8142-d3022166a7be" />
 
 ---
-# oh-my-posh
+# **oh-my-posh**
 ## Install
 ```
 brew install jandedobbeleer/oh-my-posh/oh-my-posh
@@ -61,7 +61,7 @@ source ~/.zshrc
 ```
 
 ---
-# powerlevel10k
+# **powerlevel10k**
 
 ## Install [powerlevel10k](https://github.com/romkatv/powerlevel10k)
 
