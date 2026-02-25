@@ -61,6 +61,11 @@ brew install jandedobbeleer/oh-my-posh/oh-my-posh
 source ~/.zshrc
 ```
 
+## config font in VS Code
+`cmd`+`,`:
+<img width="742" height="197" alt="image" src="https://github.com/user-attachments/assets/cab7425f-57a9-4d26-9024-4a8e5bd2eab2" />
+
+
 ---
 # **powerlevel10k**
 
