@@ -12,12 +12,10 @@ type `git` to install git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-# 3. Install [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-
-## install homebrew for later font and icons feature
+# 3. install homebrew
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
-### homebrew ==> Next steps:
+## homebrew ==> Next steps:
 - Run these commands in your terminal to add Homebrew to your PATH:
     `echo >> /Users/marcus/.zprofile`
     `echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/marcus/.zprofile`
@@ -26,16 +24,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 - Further documentation:
     https://docs.brew.sh
 
-## pull powerlevel10k
-```
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
-```
-
-## change .zshrc file
-Under `/Users/marcus/.zshrc`, update from `ZSH_THEME="robbyrussell"` to `ZSH_THEME="powerlevel10k/powerlevel10k"`
-
-## install Font & Icons
+# 4. install Font & Icons
 Font: You need a Nerd Font (with Powerline symbols, icons).
 Install one like MesloLGS NF → it's recommended by Powerlevel10k.
 
@@ -56,18 +45,46 @@ brew install --cask font-meslo-lg-nerd-font
 
 <img width="835" alt="SCR-20250427-ozjn" src="https://github.com/user-attachments/assets/42c05bb2-e3ce-414f-8142-d3022166a7be" />
 
+---
+# oh-my-posh
+## Install
+```
+brew install jandedobbeleer/oh-my-posh/oh-my-posh
+```
+## .zsh modify
+- Create a `agnoster-stable.omp.json` file under `~/.config/oh-my-posh`
+- Add `eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/agnoster-stable.omp.json)"` at the end of the `.zshrc` file
 
-## start powerlevel10k setup app
+## restart
+```
+source ~/.zshrc
+```
+
+---
+# powerlevel10k
+
+## Install [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+
+### pull powerlevel10k
+```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+```
+
+### change .zshrc file
+Under `/Users/marcus/.zshrc`, update from `ZSH_THEME="robbyrussell"` to `ZSH_THEME="powerlevel10k/powerlevel10k"`
+
+### start powerlevel10k setup app
 source ~/.zshrc
 
-## reset through powerlevel10k app: 
+### reset through powerlevel10k app: 
 p10k configure
 
-## NOTICE: 
+### NOTICE: 
 You should choose Unicode for the advanced features:
 ![SCR-20250427-petl](https://github.com/user-attachments/assets/61bb698c-b034-4b7a-a7d2-f6e6059a5663)
 
-# 4. Result
+### Result
 ![SCR-20250427-pftz](https://github.com/user-attachments/assets/372b5eaf-3885-4197-90dc-9442228e2a44)
 
 
