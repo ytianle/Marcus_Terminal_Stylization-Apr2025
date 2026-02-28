@@ -11,113 +11,115 @@
         {
           "type": "os",
           "style": "diamond",
-          "leading_diamond": "\uE0B6",
-          "trailing_diamond": "\uE0B4",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#FFFFFF",
           "background": "#0B1020",
-          "template": "\uF179"
+          "template": "\uf179"
         },
         {
           "type": "session",
           "style": "diamond",
-          "trailing_diamond": "\uE0B4",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#FFFFFF",
           "background": "#111827",
-          "template": " \uF007 {{ .UserName }} "
+          "template": " \uf007 {{ .UserName }} "
         },
         {
           "type": "path",
           "style": "diamond",
-          "trailing_diamond": "\uE0B4",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#0B1020",
-            "background": "#FFD580",
-          "template": " \uF07B {{ .Path }} ",
+          "background": "#FFD580",
+          "template": " \uf115 {{ .Path }} ",
           "properties": {
-            "style": "folder",
-            "truncate_to_repo": false,
-            "max_depth": 0,
-            "home_icon": "\uF015",
-            "folder_icon": "\uF07B",
-            "folder_separator_icon": " \u276F "
+            "style": "full",
+            "truncate_to_repo": false
           }
         },
         {
           "type": "git",
           "style": "diamond",
-          "trailing_diamond": "\uE0B4",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#0B1020",
-            "background": "#A5D8FF",
-          "template": " {{ .HEAD }}{{ if .Working.Changed }} \u2717{{ end }}{{ if .Staging.Changed }} \u25CF{{ end }} "
+          "background": "#A5D8FF",
+          "template": " \uf09b {{ .HEAD }}{{ if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}{{ if .Working.Changed }} \u2717 {{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \u25cf {{ .Staging.String }}{{ end }} ",
+          "properties": {
+            "branch_icon": "\uf126 "
+          }
         },
         {
           "type": "aws",
           "style": "diamond",
-          "trailing_diamond": "\uE0B4",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#0B1020",
-            "background": "#FFD8A8",
-          "template": " \uF0C2 AWS ",
-          "display_mode": "context"
+          "background": "#FFD8A8",
+          "template": " \uf270 AWS {{ .Profile }} {{ .Region }} ",
+          "display_mode": "context",
+          "properties": {
+            "display_default": false
+          }
         },
         {
           "type": "azure",
           "style": "diamond",
-          "trailing_diamond": "\uE0B4",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#0B1020",
-            "background": "#A5D8FF",
-          "template": " \uF0C2 AZ ",
+          "background": "#A5D8FF",
+          "template": " \ufd03 AZ ",
           "display_mode": "context"
         },
         {
           "type": "gcp",
           "style": "diamond",
-          "trailing_diamond": "\uE0B4",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#0B1020",
-            "background": "#D1F7E0",
-          "template": " \uF0C2 GCP ",
+          "background": "#D1F7E0",
+          "template": " \uf1a0 GCP ",
           "display_mode": "context"
         },
         {
           "type": "docker",
           "style": "diamond",
-          "trailing_diamond": "\uE0B4",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#0B1020",
-            "background": "#BEE3F8",
-          "template": " \uF308 ",
+          "background": "#BEE3F8",
+          "template": " \uf395 ",
           "display_mode": "context"
         },
         {
           "type": "node",
           "style": "diamond",
-          "trailing_diamond": "\uE0B4",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#0B1020",
-            "background": "#CFF8D8",
-          "template": " \uE718 {{ .Full }} ",
+          "background": "#CFF8D8",
+          "template": " \uf419 {{ .Full }} ",
           "display_mode": "context"
         },
         {
           "type": "python",
           "style": "diamond",
-          "trailing_diamond": "\uE0B4",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#0B1020",
-            "background": "#EDE9FE",
-          "template": " \uE73C {{ .Venv }} ",
+          "background": "#EDE9FE",
+          "template": " \uf3e2 {{ .Venv }} ",
           "display_mode": "context"
         },
         {
           "type": "status",
           "style": "diamond",
-          "trailing_diamond": "\uE0B4",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#0B1020",
-            "background": "#FFE4E6",
+          "background": "#FFE4E6",
           "template": " {{ if eq .Code 0 }}\u2714 ok{{ else }}\u2718 rc {{ .Code }}{{ end }} "
         },
         {
           "type": "executiontime",
           "style": "diamond",
-          "trailing_diamond": "\uE0B4",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#0B1020",
-            "background": "#E9D5FF",
-          "template": " \u23F1 {{ .FormattedMs }} ",
+          "background": "#E9D5FF",
+          "template": " \u23f1 {{ .FormattedMs }} ",
           "options": {
             "threshold": 350,
             "style": "austin"
@@ -126,20 +128,19 @@
         {
           "type": "jobs",
           "style": "diamond",
-          "trailing_diamond": "\uE0B4",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#0B1020",
-            "background": "#F8FAFC",
-          "template": " \uF0AE jobs {{ .Count }} ",
+          "background": "#F8FAFC",
+          "template": " \uf0ae jobs {{ .Count }} ",
           "display_mode": "context"
         },
-        
         {
           "type": "time",
           "style": "diamond",
-          "trailing_diamond": "\uE0B4",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#FFFFFF",
           "background": "#0B1020",
-          "template": " \uF017 {{ .CurrentDate | date \"15:04\" }} "
+          "template": " \uf017 {{ .CurrentDate | date \"15:04\" }} "
         },
         {
           "type": "text",
