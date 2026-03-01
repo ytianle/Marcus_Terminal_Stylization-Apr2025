@@ -88,15 +88,6 @@
           "display_mode": "context"
         },
         {
-          "type": "node",
-          "style": "diamond",
-          "trailing_diamond": "\ue0b4",
-          "foreground": "#0B1020",
-          "background": "#CFF8D8",
-          "template": " \uf419 {{ .Full }} ",
-          "display_mode": "context"
-        },
-        {
           "type": "python",
           "style": "diamond",
           "trailing_diamond": "\ue0b4",
