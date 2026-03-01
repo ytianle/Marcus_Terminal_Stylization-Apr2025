@@ -11,6 +11,18 @@ type `git` to install git
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+## 2.1 Plugins
+### zsh-syntax-highlighting
+```
+brew install zsh-syntax-highlighting
+```
+Add `source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh` in `.zshrc`
+
+### zsh-autosuggestions
+```
+brew install zsh-autosuggestions
+```
+Add `source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh` in `.zshrc`
 
 # 3. install homebrew
 `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
