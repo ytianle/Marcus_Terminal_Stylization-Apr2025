@@ -58,7 +58,7 @@ brew install --cask font-meslo-lg-nerd-font
 <img width="835" alt="SCR-20250427-ozjn" src="https://github.com/user-attachments/assets/42c05bb2-e3ce-414f-8142-d3022166a7be" />
 
 ---
-# **oh-my-posh** BEST OF BEST!
+# **oh-my-posh** [🙌🏻BEST OF THE BEST!!🙌🏻]
 
 ## Install [oh-my-posh](https://ohmyposh.dev/)
 ```
